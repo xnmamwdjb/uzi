@@ -1,8 +1,3 @@
-/**
- * UI
- * @author Xiaoyu
- */
-
 var canvas = document.getElementById("chess");
 var context = canvas.getContext("2d");
 var me = true;              // 判断该轮黑白棋落子权
@@ -12,7 +7,7 @@ var flag=0;
 /**
  * 开始按钮逻辑:初始化棋盘,并让电脑黑棋先行(7,7)位置
  */
-function startGame() {
+function hard() {
     
     // 初始化棋盘信息
     for (var i = 0; i < 15; i++) {
@@ -45,7 +40,7 @@ function startGame() {
 
 
 
-function flaga() {
+function easy() {
 	    
     // 初始化棋盘信息
     for (var i = 0; i < 15; i++) {
