@@ -1,9 +1,3 @@
-/**
- * AI
- * @author Airing
- */
-
-
 var wins = [];      // 赢法统计数组
 var count = 0;      // 赢法统计数组的计数器
 
@@ -58,15 +52,10 @@ for (var i = 0; i < 11; i++) {
     }
 }
 
-function rnd(seed){
-seed=(seed*9301+49297)%233280;
-return seed/(233280.0);
-}
-
-function rand(number){
-today=new Date();
-seed=today.getTime();
-return Math.ceil(rnd(seed)*number);
+function rand(number) {
+    today = new Date();
+    seed = (today.getTime()) % 15;
+    return seed;
 }
 /**
  * AI
@@ -148,15 +137,16 @@ function airingGo() {
         }
     }
 	}
-    else if(flag==1){
-	  for(var i=(rand(15));i<15;i=(rand(15))){
-        for(var j=(rand(15));j<15;j=(rand(15))){
-            if (chessBoard[i][j] == 0) {
-                u=i,v=j;
-			}
-			}
-		}
-	}
+        else if (flag == 1) {
+        for (var i = (rand(15)); i < 15; i = (rand(15))) {
+            for (var j = (rand(15)); j < 15; j = (rand(15))) {
+                if (chessBoard[i][j] == 0) {
+                    u = i, v = j; i = -1; break;
+                }
+            }
+            if (i == -1) break;
+        }
+    }
     oneStep(u, v, false);
     chessBoard[u][v] = 2;
 
