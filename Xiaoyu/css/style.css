@@ -19,7 +19,7 @@ header h1{
     max-width: 600px;
 }
 
-header #newgamebutton{
+header #hardbutton{
     display:block;
     margin:20px auto;
 
@@ -33,11 +33,11 @@ header #newgamebutton{
     border-radius:10px;
     text-decoration:none;
 }
-header #newgamebutton:hover{
+header #hardbutton:hover{
     background-color:#9f8b77;
 }
 
-header #abutton{
+header #easybutton{
     display:block;
     margin:20px auto;
 
@@ -51,7 +51,7 @@ header #abutton{
     border-radius:10px;
     text-decoration:none;
 }
-header #abutton:hover{
+header #easybutton:hover{
     background-color:#9f8b77;
 }
 
